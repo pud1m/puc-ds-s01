@@ -59,10 +59,10 @@ Como gestor da universidade, gostaria de que, após uma disciplina alcançar 60 
 Como gestor da universidade, gostaria de que, após concluída a matrícula do aluno para o semestre, o sistema de cobrança seja notificado para gerar as cobranças referentes àquele semestre.
 
 ## História 8
-Como professor da universidade, gostaria de poder acessar o sistema e ver quais alunos estão matriculados em cada disciplina
+Como professor da universidade, gostaria de poder acessar o sistema e ver quais alunos estão matriculados em cada disciplina.
 
 ## História 9
-Como usuário do sistema, gostaria de ter o acesso aos meus dados protegido por usuário e senha
+Como usuário do sistema, gostaria de ter o acesso aos meus dados protegido por usuário e senha.
 
 ```
 
