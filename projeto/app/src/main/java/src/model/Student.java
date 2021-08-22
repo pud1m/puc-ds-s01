@@ -1,10 +1,12 @@
 package model;
 
+import controller;
+
 public class Student extends User{
     public Student(){}
 
-    private Registration registrations[];
-    private Course course;
+    //private Registration registrations[];
+    //private Course course;
 
     public void createRegistrations(String Discipline){
         //
