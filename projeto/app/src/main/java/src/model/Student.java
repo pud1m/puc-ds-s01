@@ -1,12 +1,12 @@
 package model;
 
-import controller;
+import controller.Registration;
 
 public class Student extends User{
     public Student(){}
 
-    //private Registration registrations[];
-    //private Course course;
+    //public Registration registrations[];
+    //public Course course;
 
     public void createRegistrations(String Discipline){
         //
