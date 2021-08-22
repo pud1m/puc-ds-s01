@@ -1,13 +1,13 @@
 public class Discipline{
     public Discipline(){}
 
-    private Classes class;
+    private Classes group;
     private Professor professor;
     private int semester;
     private int credits;
     private boolean mandatory;
 
-    public void createClass(String Class){
+    public void createClass(String group){
 
     }
 
@@ -36,11 +36,11 @@ public class Discipline{
     }
 
     public int getClassess(){
-        return class;
+        return group;
     }
 
-    public void setClasses(Classes class){
-        this.class = class;
+    public void setClasses(Classes group){
+        this.group = group;
     }
 
     public int getProfessor(){
