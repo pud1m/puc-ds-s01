@@ -45,6 +45,17 @@ public class UI{
             do{
                 MenuStudent.GetMenuStudent();    
                 choice = readInput.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        MenuDiscipline.GetMenuDiscipline();
+                        break;
+                    case 2:
+
+                        break;
+                    default:
+                        break;
+                }
             }while(choice != 3); 
             
             readInput.close();

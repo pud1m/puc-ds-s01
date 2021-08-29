@@ -11,8 +11,8 @@ public class Student extends User{
     public Registration registrations[];
     public Course course;
 
-    public void createRegistrations(String Discipline){
-        //
+    public void createRegistrations(){
+        
     }
 
     public void cancelRegistrations(String Discipline){
