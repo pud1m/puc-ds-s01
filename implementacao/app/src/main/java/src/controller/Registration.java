@@ -1,3 +1,5 @@
+package src.controller;
+
 public class Registration{
     public Registration(){}
 
