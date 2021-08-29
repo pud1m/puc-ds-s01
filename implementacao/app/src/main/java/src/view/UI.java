@@ -2,6 +2,7 @@ package src.view;
 
 import java.util.Scanner;
 import src.controller.LoginController;
+import src.model.*;
 
 public class UI{
     public UI(){}
@@ -35,7 +36,21 @@ public class UI{
     }
 
 
-    public static void Control(){
+    public static void Control(User user){
+        int choice;
+
+        try {
+            do{
+                MenuStudent.GetMenuStudent();
+                Scanner readInput = new Scanner(System.in);
+                choice = readInput.nextInt();
+                
+            }while(choice != 3); 
+            
+            readInput.close();
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
         
     }
 }

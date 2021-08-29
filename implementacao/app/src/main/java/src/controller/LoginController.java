@@ -2,6 +2,7 @@ package src.controller;
 
 import java.util.Scanner;
 import src.model.*;
+import src.view.UI;
 
 public class LoginController{
     public LoginController(){}
@@ -36,12 +37,13 @@ public class LoginController{
             System.out.println("Digite sua senha: ");
             tmpPass = readInput.nextLine();
 
-            if(validateLogin(tmpUser, tmpPass) == null){
-                System.out.println("Deu ruim");
-            } else {
-                System.out.println("Deu bom");
+            User user = validateLogin(tmpUser, tmpPass);
+            UI.Control(user);
+
+            if(user != null){
+                return 0;
             }
-            return 0;
+            
         } catch (Exception e) {
             //TODO: handle exception
         }
