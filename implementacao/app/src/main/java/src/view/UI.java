@@ -40,11 +40,11 @@ public class UI{
         int choice;
 
         try {
+            Scanner readInput = new Scanner(System.in);
+
             do{
-                MenuStudent.GetMenuStudent();
-                Scanner readInput = new Scanner(System.in);
+                MenuStudent.GetMenuStudent();    
                 choice = readInput.nextInt();
-                
             }while(choice != 3); 
             
             readInput.close();

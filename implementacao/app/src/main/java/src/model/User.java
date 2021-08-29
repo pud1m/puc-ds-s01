@@ -1,16 +1,16 @@
 package src.model;
 
 public class User{
-    public User(){}
+    public User(String Name, String Password, String Address){
+        setName(Name);
+        setPassword(Password);
+        setAddress(Address);
+    }
 
-    private int ID;
     private String Name;
     private String Password;
     private String Address;
     
-    public int getID(){
-        return ID;
-    }
 
     public void setName(String Name){
         this.Name = Name;

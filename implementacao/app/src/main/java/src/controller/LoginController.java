@@ -17,9 +17,9 @@ public class LoginController{
         User tmpUser;
 
         if(name.equals("leo") && pass.equals("1234")){
-            return tmpUser = new Student(); 
-        }else if(name.equals("bolacha")){
-            return tmpUser = new Professor();
+            return tmpUser = new Student("leo","1234", ""); 
+        }else if(name.equals("bolacha") && pass.equals("1234")){
+            return tmpUser = new Professor("bolacha", "1234", "");
         }
 
         return null;
