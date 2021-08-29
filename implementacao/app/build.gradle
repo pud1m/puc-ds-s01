@@ -28,3 +28,9 @@ application {
     // Define the main class for the application.
     mainClass = 'src.App'
 }
+
+jar {
+     manifest {
+        attributes 'Main-Class': 'src.App'
+    }
+ }

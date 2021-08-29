@@ -1,6 +1,6 @@
 package src.model;
 
-import controller.Registration;
+import src.controller.Registration;
 
 public class Student extends User{
     public Student(){}

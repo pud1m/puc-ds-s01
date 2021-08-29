@@ -1,16 +1,13 @@
 package src;
 
-import controller.Login;
+import src.view.UI;
 
 public class App {
     public static void main(String[] args) {
-        Login login = new Login();
-        boolean logon;
-
-        logon = login.validateLogin();
-        
-        if(logon){
-            String userName = login.getUser();   
+        try {
+            UI.UserExperience();
+        } catch (Exception e) {
+            //TODO: handle exception
         }
     }
 }

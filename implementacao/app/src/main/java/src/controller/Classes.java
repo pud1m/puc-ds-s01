@@ -1,5 +1,7 @@
 package src.controller;
 
+import src.model.Discipline;
+
 public class Classes{
     public Classes(){}
 

@@ -1,5 +1,7 @@
 package src.model;
 
+import src.controller.Classes;
+
 public class Discipline{
     public Discipline(){}
 
@@ -33,19 +35,19 @@ public class Discipline{
         return mandatory;
     }
 
-    public boolean setMandatory(boolean mandatory){
+    public void setMandatory(boolean mandatory){
         this.mandatory = mandatory;
     }
 
-    public int getClassess(){
-        return group;
+    public Classes getClassess(){
+        return this.group;
     }
 
     public void setClasses(Classes group){
         this.group = group;
     }
 
-    public int getProfessor(){
+    public Professor getProfessor(){
         return professor;
     }
 
