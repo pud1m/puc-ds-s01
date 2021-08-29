@@ -10,4 +10,8 @@ public class Professor extends User{
 
         return students;
     }
+
+    public void createRegistrations(){}
+
+    public void getGroups(){}
 }

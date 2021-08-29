@@ -1,6 +1,6 @@
 package src.model;
 
-public class User{
+public abstract class User{
     public User(String Name, String Password, String Address){
         setName(Name);
         setPassword(Password);
@@ -35,4 +35,8 @@ public class User{
     public String getAddress(){
         return Address;
     }
+
+    public abstract void createRegistrations();
+    
+    public abstract void getGroups();
 }

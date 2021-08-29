@@ -3,16 +3,24 @@ package src.model;
 import src.controller.Classes;
 
 public class Discipline{
-    public Discipline(){}
+    public Discipline(String Name, int semester, int credits, boolean mandatory){
+        setName(Name);
+        setSemester(semester);
+        setCredits(credits);
+        setMandatory(mandatory);
+    }
 
-    private Classes group;
-    private Professor professor;
+    private String Name;
     private int semester;
     private int credits;
     private boolean mandatory;
 
-    public void createClass(String group){
+    public String getName(){
+        return this.Name;
+    }
 
+    public void setName(String Name){
+        this.Name = Name;
     }
 
     public int getSemester(){
@@ -23,7 +31,7 @@ public class Discipline{
         this.semester = semester;
     }
 
-    public int getCredist(){
+    public int getCredits(){
         return credits;
     }
 
@@ -37,21 +45,5 @@ public class Discipline{
 
     public void setMandatory(boolean mandatory){
         this.mandatory = mandatory;
-    }
-
-    public Classes getClassess(){
-        return this.group;
-    }
-
-    public void setClasses(Classes group){
-        this.group = group;
-    }
-
-    public Professor getProfessor(){
-        return professor;
-    }
-
-    public void setProfessor(Professor professor){
-        this.professor = professor;
     }
 }

@@ -38,9 +38,9 @@ public class LoginController{
             tmpPass = readInput.nextLine();
 
             User user = validateLogin(tmpUser, tmpPass);
-            UI.Control(user);
 
             if(user != null){
+                UI.Control(user);
                 return 0;
             }
             

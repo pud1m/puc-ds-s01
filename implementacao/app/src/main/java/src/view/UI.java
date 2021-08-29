@@ -40,7 +40,7 @@ public class UI{
         int choice;
 
         try {
-            Scanner readInput = new Scanner(System.in);
+            Scanner readInput = new Scanner(System.in)  ;
 
             do{
                 MenuStudent.GetMenuStudent();    
@@ -49,9 +49,11 @@ public class UI{
                 switch (choice) {
                     case 1:
                         MenuDiscipline.GetMenuDiscipline();
+                        readInput.nextLine();
+                        user.createRegistrations();
                         break;
                     case 2:
-
+                        user.getGroups();
                         break;
                     default:
                         break;
