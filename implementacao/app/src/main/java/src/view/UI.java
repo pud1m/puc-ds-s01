@@ -14,12 +14,7 @@ public class UI{
             int choice;
             Scanner readInput = new Scanner(System.in);
             int response = 1;
-            File file = new File(FileName);
-            ReadArchive read = new ReadArchive(file);
-            System.out.println(read);
-            String[] file1 = read.getFileInArrayFormat();
             
-            System.out.println("hah " + file1);
 
             do{
                 LoginMenu.GetLoginMenu();
@@ -27,7 +22,7 @@ public class UI{
 
                 switch (choice) {
                     case 1:
-                        response = LoginController.login();
+                        response = LoginController.login(FileName);
                         break;
                     case 2:
                         
@@ -58,10 +53,10 @@ public class UI{
                     case 1:
                         MenuDiscipline.GetMenuDiscipline();
                         readInput.nextLine();
-                        user.createRegistrations();
+                        //user.createRegistrations();
                         break;
                     case 2:
-                        user.getGroups();
+                        //user.getGroups();
                         break;
                     default:
                         break;
