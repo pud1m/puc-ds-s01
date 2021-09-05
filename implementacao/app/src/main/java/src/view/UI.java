@@ -2,16 +2,24 @@ package src.view;
 
 import java.util.Scanner;
 import src.controller.LoginController;
+import src.controller.ReadArchive;
 import src.model.*;
+import java.io.File;
 
 public class UI{
     public UI(){}
 
-    public static void UserExperience(){
+    public static void UserExperience(String FileName){
         try {
             int choice;
             Scanner readInput = new Scanner(System.in);
             int response = 1;
+            File file = new File(FileName);
+            ReadArchive read = new ReadArchive(file);
+            System.out.println(read);
+            String[] file1 = read.getFileInArrayFormat();
+            
+            System.out.println("hah " + file1);
 
             do{
                 LoginMenu.GetLoginMenu();
@@ -31,7 +39,7 @@ public class UI{
 
             readInput.close();
         } catch (Exception e) {
-            //TODO: handle exception
+            System.out.println();
         }
     }
 

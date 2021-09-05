@@ -20,18 +20,26 @@ public class ReadArchive{
 
 	public ReadArchive(File file){
         try {
-            fileInput = file;
-			setScannerFile(file);
-        } catch (Exception e) {
-            //TODO: handle exception
+            if(file == null){
+                throw new FileNotFoundException();
+            } else {
+                fileInput = file;
+			    setScannerFile(file);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
         }
 	}
 
 	public void setScannerFile(File file){
         try {
-            fileScanner = new Scanner(file);
-        } catch (Exception e) {
-            //TODO: handle exception
+            if(file == null){
+                throw new FileNotFoundException();
+            } else {
+                fileScanner = new Scanner(file);
+            }
+        } catch (FileNotFoundException e) {
+             System.out.println(e.getMessage());
         }
 	}
 
@@ -41,17 +49,24 @@ public class ReadArchive{
 
 	public void setFileInput(String fileName) {
         try {
-            this.fileInput = new File(fileName);
-        } catch (Exception e) {
-            //TODO: handle exception
+            if(fileName == null){
+                throw new FileNotFoundException();
+            } else {
+                this.fileInput = new File(fileName);
+                System.out.println("THIS " + this.fileInput);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
         }
 	}
 
 	public int getArrayLength(){
         try {
             Scanner fileLength = new Scanner(fileInput);
+            System.out.println("Teste1");
             int count = 0;
-    
+            
+
             while (fileLength.hasNextLine()) {
                 count++;
                 fileLength.nextLine();
@@ -59,8 +74,8 @@ public class ReadArchive{
     
             fileLength.close();
             return count; 
-        } catch (Exception e) {
-            //TODO: handle exception
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
         }
         
         return -1;
@@ -69,17 +84,20 @@ public class ReadArchive{
 	public String[] getFileInArrayFormat(){
 
         try {
+            System.out.println("Hei");
             String array[] = new String[getArrayLength()];
 		
             while (fileScanner.hasNextLine()) {
+                System.out.println("teste");
                 String data = fileScanner.nextLine();
+                System.out.println(data);
                 array[fileSize] = data;
                 fileSize++;
             }
     
             return array; 
         } catch (Exception e) {
-            //TODO: handle exception
+            //System.out.println(e.getMessage());
         }
 
         return null;
