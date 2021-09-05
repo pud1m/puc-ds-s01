@@ -1,9 +1,11 @@
 package src.model;
 
 import java.util.Scanner;
+import java.io.Serializable;
 import src.controller.Classes;
 
-public class Student extends User{
+public class Student extends User implements Serializable {
+
     public Student(String Name, String Password, String Address){
         super(Name, Password, Address);
         groups = new Classes[10];
@@ -12,6 +14,7 @@ public class Student extends User{
     private int ID;
     public Classes groups[];
     public Course course;
+    private static final long serialVersionUID = 1L;
 
     public void createRegistrations(){
         try {

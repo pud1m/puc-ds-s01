@@ -1,8 +1,10 @@
 package src.model;
 
 import src.controller.Classes;
+import java.io.Serializable;
 
-public class Discipline{
+
+public class Discipline implements Serializable {
     public Discipline(String Name, int semester, int credits, boolean mandatory){
         setName(Name);
         setSemester(semester);
@@ -14,6 +16,7 @@ public class Discipline{
     private int semester;
     private int credits;
     private boolean mandatory;
+    private static final long serialVersionUID = 1L;
 
     public String getName(){
         return this.Name;

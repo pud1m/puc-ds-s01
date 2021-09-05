@@ -1,6 +1,11 @@
 package src.model;
 
-public class Professor extends User{
+import java.io.Serializable;
+
+public class Professor extends User implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     public Professor(String Name, String Password, String Address){
         super(Name, Password, Address);
     }
