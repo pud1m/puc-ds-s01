@@ -63,7 +63,6 @@ public class ReadArchive{
 	public int getArrayLength(){
         try {
             Scanner fileLength = new Scanner(fileInput);
-            System.out.println("Teste1");
             int count = 0;
             
 
@@ -84,13 +83,11 @@ public class ReadArchive{
 	public String[] getFileInArrayFormat(){
 
         try {
-            System.out.println("Hei");
             String array[] = new String[getArrayLength()];
 		
             while (fileScanner.hasNextLine()) {
-                System.out.println("teste");
                 String data = fileScanner.nextLine();
-                System.out.println(data);
+                // System.out.println(data);
                 array[fileSize] = data;
                 fileSize++;
             }

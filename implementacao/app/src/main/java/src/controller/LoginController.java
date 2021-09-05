@@ -8,21 +8,31 @@ import src.view.UI;
 public class LoginController{
     public LoginController(){}
 
+    private static String[][] user;
+    private static int Lines;
+    private static int Columns;
+
     private static void loadNames(String FileName){
         File file = new File(FileName);
         ReadArchive read = new ReadArchive(file);
         String[] file1 = read.getFileInArrayFormat();
-        String[][] places1 = {{"", "", "", ""}, {"", "", ""}};
+        String[][] places1 = {{""}, {""}, {""},{""}};
+        String[] places;
+
+        Lines = file1.length;
 
         for(int i = 0; i < file1.length; i++){
-            String places[] = file1[i].split(";");
+            places = file1[i].split(";");
             places1[i] = new String[places.length];
-
+            
             for(int j = 0; j < places.length; j++){
-
+                System.out.println("i " + i + " j " + j);
                 places1[i][j] = places[j];
             }
+            Columns = places.length;
         }
+
+        user = places1;
     }
 
     private void getName(){}
@@ -35,13 +45,20 @@ public class LoginController{
         User tmpUser;
 
         loadNames(FileName);
-
-        if(name.equals("leo") && pass.equals("1234")){
-            return tmpUser = new Student("leo","1234", ""); 
-        }else if(name.equals("bolacha") && pass.equals("1234")){
-            return tmpUser = new Professor("bolacha", "1234", "");
+        
+        System.out.println("linhas " + Lines);
+        for(int i = 0; i < Lines; i++){
+            for(int j = 0; j < Columns; j++){
+                System.out.println(name + " " + user[i][j]);
+                if(name.equals(user[i][0]) && pass.equals(user[i][1])){
+                    if(user[i][3].equals("User")){
+                        
+                    }
+                }
+            }
         }
 
+        System.out.println("RUIMM");
         return null;
     }
 
