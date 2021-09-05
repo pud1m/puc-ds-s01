@@ -25,7 +25,6 @@ public class Student extends User implements Serializable {
             Classes tmpClass = new Classes(Discipline, 1,10, true);
             groups[0] = tmpClass;
             
-            System.out.println("TES");
             readInput.close();
         } catch (Exception e) {
             //TODO: handle exception

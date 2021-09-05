@@ -38,8 +38,19 @@ public class UI{
         }
     }
 
-
     public static void Control(User user){
+        String tmp = LoginController.getUserType();
+
+        System.out.println("tipo " + tmp);
+        if(tmp.equals("Student")){
+            ControlStudent(user);
+        } else {
+            ControlProfessor(user);
+        }
+    }
+
+
+    public static void ControlStudent(User user){
         int choice;
 
         try {
@@ -66,7 +77,30 @@ public class UI{
             readInput.close();
         } catch (Exception e) {
             //TODO: handle exception
-        }
-        
+        }   
+    }
+
+    public static void ControlProfessor(User user){
+        int choice;
+
+        try {
+            Scanner readInput = new Scanner(System.in)  ;
+
+            do{
+                MenuProfessor.GetMenuProfessor();    
+                choice = readInput.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        break;
+                    default:
+                        break;
+                }
+            }while(choice == 1); 
+            
+            readInput.close();
+        } catch (Exception e) {
+            //TODO: handle exception
+        }   
     }
 }

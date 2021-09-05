@@ -11,6 +11,11 @@ public class LoginController{
     private static String[][] user;
     private static int Lines;
     private static int Columns;
+    private static String UserType;
+
+    public static String getUserType(){
+        return UserType;
+    }
 
     private static void loadNames(String FileName){
         File file = new File(FileName);
@@ -26,7 +31,6 @@ public class LoginController{
             places1[i] = new String[places.length];
             
             for(int j = 0; j < places.length; j++){
-                System.out.println("i " + i + " j " + j);
                 places1[i][j] = places[j];
             }
             Columns = places.length;
@@ -46,19 +50,19 @@ public class LoginController{
 
         loadNames(FileName);
         
-        System.out.println("linhas " + Lines);
         for(int i = 0; i < Lines; i++){
-            for(int j = 0; j < Columns; j++){
-                System.out.println(name + " " + user[i][j]);
-                if(name.equals(user[i][0]) && pass.equals(user[i][1])){
-                    if(user[i][3].equals("User")){
-                        
-                    }
+            if(name.equals(user[i][0]) && pass.equals(user[i][1])){
+
+                if(user[i][2].equals("Student")){
+                    UserType = "Student";
+                    return new Student(user[i][0],user[i][1], user[i][3]);
+                } else {
+                    UserType = "Professor";
+                    return new Professor(user[i][0],user[i][1], user[i][3]);
                 }
             }
         }
 
-        System.out.println("RUIMM");
         return null;
     }
 
