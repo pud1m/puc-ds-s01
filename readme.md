@@ -77,7 +77,7 @@ Como usuário do sistema, gostaria de ter o acesso aos meus dados protegido por 
 ![umlInicial](https://user-images.githubusercontent.com/38760047/132139623-88ae4b35-8de9-4a9f-9d33-a6978c02fc85.PNG)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-** Uml Gerada na Ultima Sprint**
+**Uml Gerada na Ultima Sprint**
 
 ![umlFinal](https://user-images.githubusercontent.com/38760047/132147283-758aaf6d-6d23-488f-947f-fad5725b5eca.PNG)
 
