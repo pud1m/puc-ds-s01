@@ -64,7 +64,7 @@ public class UI{
                     case 1:
                         MenuDiscipline.GetMenuDiscipline();
                         readInput.nextLine();
-                        //user.createRegistrations();
+                        user.createRegistrations();
                         break;
                     case 2:
                         //user.getGroups();

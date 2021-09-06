@@ -22,9 +22,9 @@ public class Student extends User implements Serializable {
             String Discipline;
 
             Discipline = readInput.nextLine();
-            Classes tmpClass = new Classes(Discipline, 1,10, true);
+            Classes tmpClass = new Classes(Discipline, 1,1, true);
             groups[0] = tmpClass;
-            
+            System.out.println(tmpClass.toString());
             readInput.close();
         } catch (Exception e) {
             //TODO: handle exception
